@@ -1,6 +1,7 @@
 ﻿#include "LinkedList.h"
+#include "DoublyLinkedList.h"
 
-int main(void) {
+void singly_Node_test(void) {
 	int count = 0;
 	Node* List = NULL;
 	Node* Current = NULL;
@@ -58,4 +59,37 @@ int main(void) {
 	}
 
 	return 0;
+}
+
+void doubly_Linked_Node_test(void) {
+	unsigned int count = 0;
+	DLL_Node* List = NULL;
+	DLL_Node* Current = NULL;
+	DLL_Node* NewNode = NULL;
+
+	// 노드 5개 추가
+	for (int i = 0; i < 5; i++) {
+		NewNode = DLL_CreateNode(i + 1);
+		DLL_AppendNode(&List, NewNode);
+	}
+	
+	// 리스트 출력
+	count = DLL_GetNodeCount(List);
+	for (int i = 0; i < count; i++) {
+		Current = DLL_GetNodeAt(&List, i);
+		printf("Double Linked list[%d] = %d\n", i, Current->data);
+	}
+
+	for (int i = 0; i < count; i++) {
+		Current = DLL_GetNodeAt(&List, 0);
+		if (Current != NULL) {
+			DLL_DeleteNode(&List, Current);
+			DLL_DestroyNode(Current);
+		}
+	}
+}
+
+int main(void) {
+	//singly_Node_test();
+	doubly_Linked_Node_test();
 }

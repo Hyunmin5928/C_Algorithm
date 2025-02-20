@@ -24,9 +24,15 @@
     <ClCompile Include="Test.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DoublyLinkedList.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
