@@ -128,9 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArrayStack.c" />
+    <ClCompile Include="ArrayStackTest.c" />
+    <ClCompile Include="Calculator.c" />
+    <ClCompile Include="CalculatorTest.c" />
     <ClCompile Include="CircularDoublyLinkedList.c" />
     <ClCompile Include="DoublyLinkedList.c" />
     <ClCompile Include="LinkedList.c" />
+    <ClCompile Include="LinkedListStack.c" />
+    <ClCompile Include="LinkedListStackTest.c" />
     <ClCompile Include="LinkedListTest.c" />
     <ClCompile Include="SLL.c" />
     <ClCompile Include="Test.c" />
@@ -138,9 +143,13 @@
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="ArrayStackTest.h" />
+    <ClInclude Include="Calculator.h" />
+    <ClInclude Include="CalculatorTest.h" />
     <ClInclude Include="CircularDoublyLinkedList.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LinkedListStack.h" />
+    <ClInclude Include="LinkedListStackTest.h" />
     <ClInclude Include="LinkedLIstTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

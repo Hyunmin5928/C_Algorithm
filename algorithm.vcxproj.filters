@@ -48,6 +48,21 @@
     <ClCompile Include="LinkedListTest.c">
       <Filter>소스 파일\Linked_list</Filter>
     </ClCompile>
+    <ClCompile Include="ArrayStackTest.c">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListStack.c">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListStackTest.c">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculator.c">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="CalculatorTest.c">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircularDoublyLinkedList.h">
@@ -66,6 +81,18 @@
       <Filter>헤더 파일\Linked_list_header</Filter>
     </ClInclude>
     <ClInclude Include="ArrayStackTest.h">
+      <Filter>헤더 파일\Stack_header</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListStack.h">
+      <Filter>헤더 파일\Stack_header</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListStackTest.h">
+      <Filter>헤더 파일\Stack_header</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>헤더 파일\Stack_header</Filter>
+    </ClInclude>
+    <ClInclude Include="CalculatorTest.h">
       <Filter>헤더 파일\Stack_header</Filter>
     </ClInclude>
   </ItemGroup>

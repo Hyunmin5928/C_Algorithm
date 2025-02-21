@@ -3,4 +3,6 @@
 
 #include "ArrayStack.h"
 
+void ArrayStack_Test(void);
+
 #endif
