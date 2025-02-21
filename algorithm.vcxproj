@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayStack.c" />
     <ClCompile Include="CircularDoublyLinkedList.c" />
     <ClCompile Include="DoublyLinkedList.c" />
     <ClCompile Include="LinkedList.c" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Test.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="CircularDoublyLinkedList.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="LinkedList.h" />

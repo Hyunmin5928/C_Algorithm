@@ -42,6 +42,9 @@
     <ClCompile Include="SLL.c">
       <Filter>소스 파일\Linked_list</Filter>
     </ClCompile>
+    <ClCompile Include="ArrayStack.c">
+      <Filter>소스 파일\Stack</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircularDoublyLinkedList.h">
@@ -52,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>헤더 파일\Linked_list_header</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayStack.h">
+      <Filter>헤더 파일\Stack_header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
