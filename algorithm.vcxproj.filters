@@ -45,6 +45,9 @@
     <ClCompile Include="ArrayStack.c">
       <Filter>소스 파일\Stack</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedListTest.c">
+      <Filter>소스 파일\Linked_list</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircularDoublyLinkedList.h">
@@ -57,6 +60,12 @@
       <Filter>헤더 파일\Linked_list_header</Filter>
     </ClInclude>
     <ClInclude Include="ArrayStack.h">
+      <Filter>헤더 파일\Stack_header</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedLIstTest.h">
+      <Filter>헤더 파일\Linked_list_header</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayStackTest.h">
       <Filter>헤더 파일\Stack_header</Filter>
     </ClInclude>
   </ItemGroup>

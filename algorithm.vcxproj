@@ -131,14 +131,17 @@
     <ClCompile Include="CircularDoublyLinkedList.c" />
     <ClCompile Include="DoublyLinkedList.c" />
     <ClCompile Include="LinkedList.c" />
+    <ClCompile Include="LinkedListTest.c" />
     <ClCompile Include="SLL.c" />
     <ClCompile Include="Test.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
+    <ClInclude Include="ArrayStackTest.h" />
     <ClInclude Include="CircularDoublyLinkedList.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LinkedLIstTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
