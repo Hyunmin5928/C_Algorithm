@@ -1,5 +1,6 @@
 ﻿#include "LinkedList.h"
 #include "DoublyLinkedList.h"
+#include "CircularDoublyLinkedList.h"
 
 void singly_Node_test(void) {
 	int count = 0;
@@ -63,33 +64,51 @@ void singly_Node_test(void) {
 
 void doubly_Linked_Node_test(void) {
 	unsigned int count = 0;
-	DLL_Node* List = NULL;
-	DLL_Node* Current = NULL;
-	DLL_Node* NewNode = NULL;
+	DLL_Node* D_List = NULL;
+	DLL_Node* D_Current = NULL;
+	DLL_Node* D_NewNode = NULL;
 
 	// 노드 5개 추가
 	for (int i = 0; i < 5; i++) {
-		NewNode = DLL_CreateNode(i + 1);
-		DLL_AppendNode(&List, NewNode);
+		D_NewNode = DLL_CreateNode((i + 1)*i);
+		DLL_AppendNode(&D_List, D_NewNode);
 	}
 	
 	// 리스트 출력
-	count = DLL_GetNodeCount(List);
+	count = DLL_GetNodeCount(D_List);
+	printf("%d\n", count);
 	for (int i = 0; i < count; i++) {
-		Current = DLL_GetNodeAt(&List, i);
-		printf("Double Linked list[%d] = %d\n", i, Current->data);
+		D_Current = DLL_GetNodeAt(D_List, i);
+		printf("Double Linked list[%d] = %d\n", i, D_Current->data);
 	}
 
+	printf("PrintProcees func start.\n");
+	PrintProceed(D_List);
+
+	printf("PrintReverse func start.\n");
+	PrintReverse(D_List);
+
+	printf("\nRemove all DLL_Nodes\n");
 	for (int i = 0; i < count; i++) {
-		Current = DLL_GetNodeAt(&List, 0);
-		if (Current != NULL) {
-			DLL_DeleteNode(&List, Current);
-			DLL_DestroyNode(Current);
+		D_Current = DLL_GetNodeAt(D_List, 0);
+		if (D_Current != NULL) {
+			DLL_DeleteNode(&D_List, D_Current);
+			DLL_DestroyNode(D_Current);
 		}
 	}
 }
 
+void Circular_Doubly_Linked_Node_Test(void) {
+	unsigned int count = 0;
+	CDLL_Node* C_List = NULL;
+	CDLL_Node* C_Current = NULL;
+	CDLL_Node* C_NewNode = NULL;
+
+	
+}
+
 int main(void) {
 	//singly_Node_test();
-	doubly_Linked_Node_test();
+	//doubly_Linked_Node_test();
+	//Circular_Doubly_Linked_Node_Test();
 }

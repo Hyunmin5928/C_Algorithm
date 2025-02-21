@@ -1,7 +1,7 @@
 ﻿#include "DoublyLinkedList.h"
 
 // 노드 생성 연산
-DLL_Node* DLL_CreateNode(ElementType n_data) {
+DLL_Node* DLL_CreateNode(DLL_ElementType n_data) {
 	DLL_Node* NewNode = (DLL_Node*)malloc(sizeof(DLL_Node));
 
 	NewNode->data = n_data;
@@ -32,7 +32,7 @@ void DLL_AppendNode(DLL_Node** Head, DLL_Node* NewNode) {
 }
 
 // 노드 탐색 연산
-DLL_Node* DLL_GetNodeAt(DLL_Node** Head, int location) {
+DLL_Node* DLL_GetNodeAt(DLL_Node* Head, int location) {
 	DLL_Node* Current = Head;
 
 	while (Current != NULL && (--location) >= 0) {
@@ -86,4 +86,80 @@ int DLL_GetNodeCount(DLL_Node* Head) {
 		count++;
 	}
 	return count;
+}
+
+void PrintNode(DLL_Node* _Node) {
+	if (_Node->PrevNode = NULL) {
+		printf("Prev : NULL");
+	}
+	else {
+		printf("Prev: %d", _Node->PrevNode->data);
+		printf("Current: %d", _Node->data);
+	}
+	if (_Node->NextNode == NULL) {
+		printf("Next: NULL\n");
+	}
+	else {
+		printf("Next: %d", _Node->NextNode->data);
+	}
+}
+void PrintProceed(DLL_Node* Head) {
+	int idx = 0;
+	if (Head == NULL) {
+		printf("NULL List\n");
+	}
+	else {
+		while (Head != NULL) {
+			printf("DLL_Node[%d] -> ", idx);
+			if (Head->PrevNode == NULL) {
+				printf("Prev data : NULL\t");
+				printf("Cur data : %d\t", Head->data);
+			}
+			else {
+				printf("Prev data : %d\t", Head->PrevNode->data);
+				printf("Cur data : %d\t", Head->data);
+			}
+			if (Head->NextNode == NULL) {
+				printf("Next data : NULL\n");
+			}
+			else {
+				printf("Next data : %d\n", Head->NextNode->data);
+			}
+			Head = Head->NextNode;
+			idx++;
+		}
+	}
+}
+
+void PrintReverse(DLL_Node* Head) {
+	int idx = 0;
+	if (Head == NULL) {
+		printf("NULL List\n");
+	}
+	else {
+		while (Head->NextNode != NULL) {
+			Head = Head->NextNode;
+			idx++;
+		}
+		//printf("%d %d", Head->data, idx);
+		while (Head != NULL) {
+			printf("DLL_Node[%d] -> ", idx);
+			if (Head->PrevNode == NULL) {
+				printf("Prev data : NULL\t");
+				printf("Cur data : %d\t", Head->data);
+			}
+			else {
+				printf("Prev data : %d\t", Head->PrevNode->data);
+				printf("Cur data : %d\t", Head->data);
+			}
+			if (Head->NextNode == NULL) {
+				printf("Next data : NULL\n");
+			}
+			else {
+				printf("Next data : %d\n", Head->NextNode->data);
+			}
+			Head = Head->PrevNode;
+			idx--;
+		}
+	}
 }
