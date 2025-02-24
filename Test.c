@@ -10,5 +10,7 @@ int main(void) {
 	//ArrayStack_Test();
 	//Linked_List_Stack_Test();
 
+	CalculatorTest();
+
 	return 0;
 }
