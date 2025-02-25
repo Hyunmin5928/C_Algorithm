@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -132,6 +132,7 @@
     <ClCompile Include="Calculator.c" />
     <ClCompile Include="CalculatorTest.c" />
     <ClCompile Include="CircularDoublyLinkedList.c" />
+    <ClCompile Include="CircularQueue.c" />
     <ClCompile Include="DoublyLinkedList.c" />
     <ClCompile Include="LinkedList.c" />
     <ClCompile Include="LinkedListStack.c" />
@@ -139,6 +140,7 @@
     <ClCompile Include="LinkedListTest.c" />
     <ClCompile Include="SLL.c" />
     <ClCompile Include="Test.c" />
+    <ClCompile Include="Test_CircularQueue.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
@@ -146,6 +148,7 @@
     <ClInclude Include="Calculator.h" />
     <ClInclude Include="CalculatorTest.h" />
     <ClInclude Include="CircularDoublyLinkedList.h" />
+    <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListStack.h" />
