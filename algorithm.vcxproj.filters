@@ -13,87 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\Linked_list">
-      <UniqueIdentifier>{752c5efa-113a-443b-acab-de0c925e756f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\Linked_list_header">
-      <UniqueIdentifier>{9906bcbb-e210-41eb-81e7-ba9006418b70}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\Stack">
-      <UniqueIdentifier>{da1b7a06-edc1-41d7-86c7-412fd9a99724}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\Stack_header">
-      <UniqueIdentifier>{d4291a91-1f71-49da-a3de-9857cd9502da}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Test.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CircularDoublyLinkedList.c">
-      <Filter>소스 파일\Linked_list</Filter>
-    </ClCompile>
-    <ClCompile Include="DoublyLinkedList.c">
-      <Filter>소스 파일\Linked_list</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedList.c">
-      <Filter>소스 파일\Linked_list</Filter>
-    </ClCompile>
-    <ClCompile Include="SLL.c">
-      <Filter>소스 파일\Linked_list</Filter>
-    </ClCompile>
-    <ClCompile Include="ArrayStack.c">
-      <Filter>소스 파일\Stack</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedListTest.c">
-      <Filter>소스 파일\Linked_list</Filter>
-    </ClCompile>
-    <ClCompile Include="ArrayStackTest.c">
-      <Filter>소스 파일\Stack</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedListStack.c">
-      <Filter>소스 파일\Stack</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedListStackTest.c">
-      <Filter>소스 파일\Stack</Filter>
-    </ClCompile>
-    <ClCompile Include="Calculator.c">
-      <Filter>소스 파일\Stack</Filter>
-    </ClCompile>
-    <ClCompile Include="CalculatorTest.c">
-      <Filter>소스 파일\Stack</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CircularDoublyLinkedList.h">
-      <Filter>헤더 파일\Linked_list_header</Filter>
-    </ClInclude>
-    <ClInclude Include="DoublyLinkedList.h">
-      <Filter>헤더 파일\Linked_list_header</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>헤더 파일\Linked_list_header</Filter>
-    </ClInclude>
-    <ClInclude Include="ArrayStack.h">
-      <Filter>헤더 파일\Stack_header</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedLIstTest.h">
-      <Filter>헤더 파일\Linked_list_header</Filter>
-    </ClInclude>
-    <ClInclude Include="ArrayStackTest.h">
-      <Filter>헤더 파일\Stack_header</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedListStack.h">
-      <Filter>헤더 파일\Stack_header</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedListStackTest.h">
-      <Filter>헤더 파일\Stack_header</Filter>
-    </ClInclude>
-    <ClInclude Include="Calculator.h">
-      <Filter>헤더 파일\Stack_header</Filter>
-    </ClInclude>
-    <ClInclude Include="CalculatorTest.h">
-      <Filter>헤더 파일\Stack_header</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
