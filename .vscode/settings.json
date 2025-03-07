@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "linkedqueue.h": "c",
+        "circularqueue.h": "c"
+    }
+}

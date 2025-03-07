@@ -1,6 +1,6 @@
-﻿#include "LinkedLIstTest.h"
-#include "ArrayStackTest.h"
-#include "LinkedListStackTest.h"
+﻿#include ""
+//#include "ArrayStackTest.h"
+//#include "LinkedListStackTest.h"
 
 int main(void) {
 	//singly_Node_test();
@@ -10,7 +10,7 @@ int main(void) {
 	//ArrayStack_Test();
 	//Linked_List_Stack_Test();
 
-	CalculatorTest();
+	//CalculatorTest();
 
 	return 0;
 }
