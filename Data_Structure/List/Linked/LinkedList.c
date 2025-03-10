@@ -93,11 +93,11 @@ void SLL_InsertBefore(Node** Head, Node* Current, Node* NewHead) {
 }
 
 void SLL_DestroyAllNodes(Node** List) {
-	Node* Head = SLL_GetNodeAt(List, 0);
+	Node* Head = SLL_GetNodeAt(*List, 0);
 	int count = SLL_GetNodeCount(Head);
 
 	for (int i = 0; i < count; i++) {
-		Node* Current = SLL_GetNodeAt(List, 0);
+		Node* Current = SLL_GetNodeAt(*List, 0);
 		SLL_RemoveNode(List, Current);
 		SLL_DestroyAllNodes(List);
 	}

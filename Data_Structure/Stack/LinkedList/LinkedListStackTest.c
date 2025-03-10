@@ -1,6 +1,6 @@
-﻿#include "LinkedListStackTest.h"
+﻿#include "LinkedListStack.h"
 
-void Linked_List_Stack_Test(void) {
+int main(void) {
 	int i = 0;
 	int count = 0;
 	LLS_Node* Popped;

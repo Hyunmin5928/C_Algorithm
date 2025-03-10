@@ -1,8 +1,6 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+﻿#include "Calculator.h"
 
-#include "CalculatorTest.h"
-
-void CalculatorTest(void) {
+int main(void) {
 	char InfixExpression[100];
 	char PostfixExpression[100];
 
