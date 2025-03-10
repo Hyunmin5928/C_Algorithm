@@ -13,6 +13,7 @@ $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(TARGET)
+	del /Q $(OBJ)
+	del /Q $(TARGET).exe
 
 .PHONY: all clean

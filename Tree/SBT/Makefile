@@ -14,6 +14,6 @@ $(TARGET): $(OBJ)
 
 clean:
 	del /Q $(OBJ)
-	del /Q $(TARGET)
+	del /Q $(TARGET).exe
 
 .PHONY: all clean
