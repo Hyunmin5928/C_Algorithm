@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
-TARGET = linkedqueue
+TARGET = LinkedQueue
 
 all: $(TARGET)
 

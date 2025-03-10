@@ -1,11 +1,6 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-
-#ifndef CALCULATOR_H
+﻿#ifndef CALCULATOR_H
 #define CALCULATOR_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "LinkedListStack.h"
 
 typedef enum {

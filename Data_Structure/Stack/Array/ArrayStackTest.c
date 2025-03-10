@@ -1,6 +1,6 @@
-﻿#include "ArrayStackTest.h"
+﻿#include "ArrayStack.h"
 
-void ArrayStack_Test(void) {
+int main(void) {
 	int i = 0;
 	ArrayStack* Stack = NULL;
 	bool AS_Bool = true;
@@ -23,21 +23,23 @@ void ArrayStack_Test(void) {
 
 
 	AS_Push(Stack, 11);
-	//for (i = 0; i < 5; i++) {
-	//	if (AS_IsEmpty(Stack)) {
-	//		break;
-	//	}
 
-	//	printf("Popped : %d, ", AS_Pop(Stack));
+	for (i = 0; i < 5; i++) {
+		if (AS_IsEmpty(Stack)) {
+			break;
+		}
 
-	//	if (!AS_IsEmpty(Stack)) {
-	//		printf("Current Top : %d\n", AS_Top(Stack));
-	//	}
-	//	else {
-	//		printf("Stack is Empty\n");
-	//	}
-	//}
+		printf("Popped : %d, ", AS_Pop(Stack));
+
+		if (!AS_IsEmpty(Stack)) {
+			printf("Current Top : %d\n", AS_Top(Stack));
+		}
+		else {
+			printf("Stack is Empty\n");
+		}
+	}
 
 	AS_DestroyStack(Stack);
 
+	return 0;
 }
