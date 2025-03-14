@@ -7,6 +7,7 @@ mingw32-make
 이후, exe파일을 실행
 test.exe
 
+```cpp
 #include <Servo.h>
 #include <U8glib.h>
 #include <DHT.h>
@@ -213,3 +214,4 @@ void motor_Control(int dc_flag){
       break;
   }
 }
+```
