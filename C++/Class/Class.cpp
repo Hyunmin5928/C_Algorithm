@@ -1,32 +1,30 @@
 #include <stdio.h>
 #include <string.h>
-//캡슐화
-class Time{
+class Human
+{
 private:
-    int hour, min, sec;
+    char *pname;
+    int age;
+
 public:
-    Time(int h, int m, int s){
-        hour = h;
-        min = m;
-        sec = s;
+    Human(const char* apname, int aage){
+        pname = new char[strlen(apname) + 1];
+        strcpy(pname, apname);
+        age = aage;
+        printf("%s 객체의 생성자가 호출되었습니다.\n", pname);
     }
-    Time(int abssec){
-        hour = abssec / 3600;
-        min = (abssec / 60) % 60;
-        sec = abssec % 60;
+    ~Human(){
+        printf("%s 객체가 파괴되었습니다.", pname);
+        delete[] pname;
     }
-    void OutTime(){
-        printf("현재 시간은 %d:%d:%d입니다 \n", hour, min, sec);
+    void intro(){
+        printf("이름 = %s, 나이 = %d\n", pname, age);
     }
 };
-
-
 int main(void){
-    Time time1(12, 23, 34);
-    time1.OutTime();
+    Human boy("김수한무거북이와두루미", 12);
 
-    Time time2(44000);
-    time2.OutTime();
+    boy.intro();
 
     return 0;
 }

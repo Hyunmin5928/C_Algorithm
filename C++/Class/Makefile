@@ -1,5 +1,5 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c11
+CC = g++
+CFLAGS = -Wall -Wextra -std=c++11
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
 TARGET = Class
@@ -13,7 +13,6 @@ $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	del /Q $(OBJ)
-	del /Q $(TARGET).exe
+	del /Q $(OBJ) $(TARGET)
 
 .PHONY: all clean
