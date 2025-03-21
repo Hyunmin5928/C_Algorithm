@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -Wextra -std=c++11
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
-TARGET = ComplexEqualOp
+TARGET = Inheritance
 
 all: $(TARGET)
 

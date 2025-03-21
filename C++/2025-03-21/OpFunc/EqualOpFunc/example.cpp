@@ -22,6 +22,20 @@ public:
         strcpy(pname, other.pname);
         age = other.age;
     }
+    // **대입 연산자 오버로딩 추가**
+    Human& operator=(const Human &other) {
+		    if (this == &other) return *this;  // 자기 자신과의 대입 방지
+		    
+		    // 기존 동적 메모리 해제
+		    delete[] pname;
+		    
+		    // 새로운 메모리 할당 및 복사 (Deep Copy)
+		    pname = new char[strlen(other.pname) + 1];
+		    strcpy(pname, other.pname);
+		    age = other.age;
+		    
+		    return *this;
+    }
     ~Human(){
         delete[] pname;
     }
