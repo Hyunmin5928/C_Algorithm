@@ -11,10 +11,7 @@ public:
         age = aage;
     }
     virtual void intro(){
-        printf("이름 : %s, 나이 : %d\n", name, age);
-    }
-    void eat(){
-        puts("냠냠냠");
+        printf("name : %s, age : %d\n", name, age);
     }
 };
 
@@ -26,25 +23,27 @@ public:
     Student(const char *aname, int aage, int astunum) : Human(aname, aage){
         stunum = astunum;
     }
-    // Override
     void intro(){
         printf("%d학번 %s입니다.\n", stunum, name);
     }
+    void study(){
+        printf("studying ddd\n");
+    }
 };
 
+void IntroSomeone(Human *pH){
+    pH->intro();
+}
+
 int main(){
-    Human h("김사람", 10);
-    Student s("이학생", 15, 12345689);
+    Human h("김공자", 10);
+    Student s("학생1", 15, 12345689);
 
     Human *pH;
+    Student *pS;
 
-    pH = &h;
-    pH->intro();    // 이름 : 김사람, 나이 : 10
-    pH->eat();      // 냠냠냠
-
-    pH = &s;
-    pH->intro();    // 12345689학번 이학생입니다.
-    pH->eat();      // 냠냠냠
+    IntroSomeone(&h);       // name : 김공자, age : 10
+    IntroSomeone(&s);       // 12345689학번 학생1입니다.
 
     return 0;
 }
