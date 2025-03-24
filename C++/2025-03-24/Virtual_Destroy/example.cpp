@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+class Base{
+private:
+    char *B_buf;
+public:
+    Base() { B_buf = new char[10]; puts("Base 생성"); }
+    virtual ~Base() { delete[] B_buf; puts("Base 파괴"); }
+};
+
+class Derived : public Base{
+private:
+    int *D_buf;
+public:
+    Derived() { D_buf = new int[32]; puts("Derived 생성"); }
+    virtual ~Derived() { delete[] D_buf; puts("Derived 파괴"); }
+};
+
+int main(){
+    Base *pB;
+
+    pB = new Derived;
+    delete pB;
+    return 0;
+}
