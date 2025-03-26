@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -Wextra -std=c++11
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
-TARGET = Const_cast
+TARGET = Member_pointer
 
 all: $(TARGET)
 
