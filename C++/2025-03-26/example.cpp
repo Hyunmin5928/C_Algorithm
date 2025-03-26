@@ -1,13 +1,24 @@
 #include <stdio.h>
 
-int main(){
-    char str[] = "string";
-    const char *c1 = str;
-    char *c2;
+class MyClass{
+public:
+    int i, j;
+    double d;
+};
 
-    c2 = const_cast<char *>(c1);
-    c2[0] = 'a';
-    puts(c2);           // atring
+int main(){
+    MyClass C;
+    int MyClass::*pi;
+    double MyClass::*pd;
+    int num;
+
+    pi = &MyClass::i;
+    pi = &MyClass::j;
+    pd = &MyClass::d;
+
+    //pd = &MyClass::i;
+    //pi = &MyClass::d;
+    //pi = &num;
 
     return 0;
 }
