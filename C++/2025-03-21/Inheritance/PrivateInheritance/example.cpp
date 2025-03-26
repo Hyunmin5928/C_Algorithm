@@ -16,7 +16,7 @@ private:
     char name[64];
     char company[32];
     int price;
-public:
+public: 
     Product(const char *aname, const char *acompany, int y, int m, int d, int aprice) 
         : Date(y, m, d) {
         strcpy(name, aname);
