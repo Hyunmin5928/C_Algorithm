@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -Wextra -std=c++11
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
-TARGET = TypeId
+TARGET = Const_cast
 
 all: $(TARGET)
 
