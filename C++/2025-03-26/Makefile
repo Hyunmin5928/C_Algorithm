@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -Wextra -std=c++11
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
-TARGET = Advanced_Member_pointer_func
+TARGET = Using
 
 all: $(TARGET)
 
