@@ -17,5 +17,13 @@ int main(){
     cout << fixed << d << endl;
     cout << scientific << d << endl;
 
+/* 
+    1.234
+    1.23
+    1.234000000
+    1.234000
+    1.234000e+00
+*/
+
     return 0;
 }

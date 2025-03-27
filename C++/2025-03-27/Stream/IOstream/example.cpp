@@ -27,5 +27,15 @@ int main(){
     cout.width(20);
     cout << internal << j << endl;
 
+/* 
+    1234
+        1234
+    1234
+    ______1234
+    -567
+                    -567
+    -                567
+*/
+
     return 0;
 }
