@@ -54,6 +54,9 @@
         "algorithm": "cpp",
         "optional": "cpp",
         "vector": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "random": "cpp",
+        "sstream": "cpp",
+        "typeindex": "cpp"
     }
 }

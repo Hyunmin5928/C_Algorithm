@@ -1,28 +1,25 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main(){
-    string s("C++ string");
+    string name, addr;
 
-    cout << s << " 문자열의 길이 = " << s.size() << endl;
-    cout << s << " 문자열의 길이 = " << s.length() << endl;
-    cout << s << " 문자열의 할당 크기 = " << s.capacity() << endl;
-    cout << s << " 문자열의 최대 길이 = " << s.max_size() << endl;
-
-    s.resize(6);
-    cout << s << " 길이 = " << s.size() << ",할당 크기 = " << s.capacity() << endl;
-
-    s.reserve(100);
-    cout << s << " 길이 = " << s.size() << ",할당 크기 = " << s.capacity() << endl;
+    cout << "이름을 입력하시오 : ";
+    cin >> name;
+    cout << "입력한 이름은 " << name << "입니다." << endl;
+    cin.ignore();        // 입력 버퍼 초기화
+    cout << "주소를 입력하시오 : ";
+    getline(cin, addr);
+    cout << "입력한 주소는 " << addr << "입니다." << endl;
+    
 
 /*  출력
-    C++ string 문자열의 길이 = 10
-    C++ string 문자열의 길이 = 10
-    C++ string 문자열의 할당 크기 = 15
-    C++ string 문자열의 최대 길이 = 4611686018427387903
-    C++ st 길이 = 6,할당 크기 = 15
-    C++ st 길이 = 100,할당 크기 = 100
+    이름을 입력하시오 : HongKildong
+    입력한 이름은 HongKildong입니다.
+    주소를 입력하시오 : Seoul Gangnam
+    입력한 주소는 Seoul Gangnam입니다.
 */
 
     return 0;
