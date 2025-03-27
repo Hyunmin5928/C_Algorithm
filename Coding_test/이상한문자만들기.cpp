@@ -1,33 +1,28 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include <string.h>
 
 using namespace std;
 
 string solution(string s) {
     string answer = "";
 
-    stringstream ss(s);
+    int idx = 0;
 
-    vector<string> strings;
-
-    string str;
-
-    while (getline(ss, str, ' ')){
-        strings.push_back(str);
-    }
-    
-    for(int i = 0; i < strings.size(); i++){
-        for(int j = 0; j < strings[i].length(); j++){
-            if(j % 2 == 0){
-                strings[i][j] = toupper(strings[i][j]);
+    for (char c : s){
+        if(c == ' ') {
+            idx = 0;
+        }
+        else{
+            if((idx % 2) == 0){
+                c = toupper(c);
             }
             else{
-                strings[i][j] = tolower(strings[i][j]);
+                c = tolower(c);
             }
-            // printf("strings[%d][%d] = %c\n", i, j, strings[i][j]);
+            idx++;
         }
+        answer += c;
     }
 
     return answer;
