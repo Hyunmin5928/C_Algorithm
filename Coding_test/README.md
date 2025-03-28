@@ -10,3 +10,5 @@
 * 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12930?itm_content=course14743
 5. k진수에서 소수 개수 구하기
 * 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/92335?itm_content=course14743
+6. H-Index
+* 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42747?itm_content=course14743

@@ -35,7 +35,7 @@ public:
         printf("%d %d %s\n", num, k, cnum.c_str());
     }
     int Find_PrimeNum(){
-        int find = 0, ans = 0;
+        long long find = 0, ans = 0;
         string sn = "";
         int idx = 0;
         for (char n : cnum){
@@ -62,14 +62,12 @@ public:
         return ans;
     }
     bool CheckPrime(long long num){
-        if(num == 1){
+        if(num == 1 || num < 1){
             return false;
         }
-        else{
-            for(long long i = 2; i * i <= num; i++){
-                if(num % i == 0){
-                    return false;
-                }
+        for(long long i = 2; i * i <= num; i++){
+            if(num % i == 0){
+                return false;
             }
         }
         return true;
