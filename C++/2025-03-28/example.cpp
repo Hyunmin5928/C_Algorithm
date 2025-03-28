@@ -1,32 +1,38 @@
-#include <iostream>
 #include <string>
+#include <iostream>
+#include <memory>
 
 using namespace std;
 
+template <typename T>
+class myptr{
+private:
+    T *p;
+public:
+    explicit myptr(T *ap) : p(ap) { }
+    ~myptr() { // 소멸자
+        delete p;
+        cout << "메모리가 해제되었습니다." << endl;
+    }
+
+    T& operator*() { // 역참조 연산자
+        return *p;
+    }
+
+    T* operator->() { // 멤버 접근 연산자
+        return p;
+    }
+};
+
 int main(){
-    string s1("aaa");
-    string s2("bbb");
+    // myptr를 사용하여 동적 메모리 관리
+    myptr<string> ptr(new string("Hello, myptr!"));
 
-    cout << (s1 == s1 ? "같다" : "다르다") << endl;
-    cout << (s1 == s2 ? "같다" : "다르다") << endl;
-    cout << (s1 > s2 ? "크다" : "작다") << endl;
+    // 역참조 연산자를 사용하여 값 출력
+    cout << "값: " << *ptr << endl;
 
-    string s3("1234567");
-    string s4("1234999");
-    cout << (s3.compare(s4) == 0 ? "같다" : "다르다") << endl;
-    cout << (s3.compare(0, 4, s4, 0 ,4) == 0 ? "같다" : "다르다") << endl;
+    // 멤버 접근 연산자를 사용하여 string의 메서드 호출
+    cout << "문자열 길이: " << ptr->length() << endl;
 
-    string s5("hongkildong");
-    cout << (s5 == "hongkildong" ? "같다" : "다르다") << endl;
-
-
-/*  출력
-    같다
-    다르다
-    작다
-    다르다
-    같다
-    같다
-*/
     return 0;
 }

@@ -58,5 +58,6 @@
         "random": "cpp",
         "sstream": "cpp",
         "typeindex": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/HM/sources/algorithm/arduino/libraries/Adafruit_GFX_Library"
 }
