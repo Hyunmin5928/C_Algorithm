@@ -24,6 +24,6 @@ string solution(string s) {
         }
         answer += c;
     }
-
+    
     return answer;
 }

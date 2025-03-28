@@ -3,27 +3,56 @@
 
 using namespace std;
 
-bool solution(string s) {
-    bool answer = true;
-    int sizes = sizeof(s)/sizeof(s[0]);
-    int len = 0;
-    for(int i = 0; i < sizes; i++){
-        if(s[i] == NULL){
-            break;
-        }
-        if(s[i] >= '0' && s[i] <='9'){
-            answer = true;
+class ChangeNum {
+private:
+    int num;
+    int k;
+    string cnum;
+public:
+    ChangeNum(int anum, int ak) {
+        num = anum;
+        k = ak;
+        cnum = "";
+    }
+    void Calc(){
+        if (k == 10){
+            cnum = to_string(num);
         }
         else {
-            printf("%c", s[i]);
-            return false;
+            int tmp = num;
+            while (tmp > 0) {
+                cnum = to_string(tmp % k) + cnum;  // 나머지를 앞쪽에 추가
+                tmp /= k;
+            }
+            if (cnum.empty()) cnum = "0";  // 0일 경우 예외 처리
         }
-        len++;
     }
-    if(len != 4 && len != 6){
-        printf("h");
-        return false;
+    string Get_Cnum(){
+        return cnum;
     }
+    void printAll(){
+        printf("%d %d %s", num, k, cnum.c_str());
+    }
+    int Find_PrimeNum(){
+        int find;
+        int idx;
+        for (char n : cnum){
+            if(int(n) == 0){
+
+            }
+        }
+        return find;
+    }
+};
+
+int solution(int n, int k) {
+    int answer = -1;
+    ChangeNum CN(n, k);
+    CN.Calc();
+    
+    CN.printAll();
+    
+    answer = CN.Find_PrimeNum();
     
     return answer;
 }

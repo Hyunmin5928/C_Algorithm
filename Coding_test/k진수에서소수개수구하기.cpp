@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -7,24 +8,82 @@ class ChangeNum {
 private:
     int num;
     int k;
-    int cnum;
+    string cnum;
 public:
-    ChangeNum(int anum, int ak, int acnum = 0) {
+    ChangeNum(int anum, int ak) {
         num = anum;
         k = ak;
-        cnum = acnum;
+        cnum = "";
     }
     void Calc(){
-        int tmp = 0;
-        cnum = tmp;
+        if (k == 10){
+            cnum = to_string(num);
+        }
+        else {
+            int tmp = num;
+            while (tmp > 0) {
+                cnum = to_string(tmp % k) + cnum;  // 나머지를 앞쪽에 추가
+                tmp /= k;
+            }
+            if (cnum.empty()) cnum = "0";  // 0일 경우 예외 처리
+        }
     }
-    int Get_Cnum(){
+    string Get_Cnum(){
         return cnum;
+    }
+    void printAll(){
+        printf("%d %d %s\n", num, k, cnum.c_str());
+    }
+    int Find_PrimeNum(){
+        int find = 0, ans = 0;
+        string sn = "";
+        int idx = 0;
+        for (char n : cnum){
+            if((n - '0') == 0){
+                if(!sn.empty()){
+                    find = stoll(sn);
+                    if(CheckPrime(find)){
+                        ans++;
+                    }
+                }
+                sn = "";
+            }
+            else{
+                sn += n; 
+            }
+            idx++;
+        }
+        if(!sn.empty()){
+            find = stoll(sn);
+            if(CheckPrime(find)){
+                ans++;
+            }
+        }
+        return ans;
+    }
+    bool CheckPrime(long long num){
+        if(num == 1){
+            return false;
+        }
+        else{
+            for(long long i = 2; i * i <= num; i++){
+                if(num % i == 0){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 };
 
 int solution(int n, int k) {
     int answer = -1;
     ChangeNum CN(n, k);
+    CN.Calc();
+    
+    //CN.printAll();
+    
+    answer = CN.Find_PrimeNum();
+    
     return answer;
 }
